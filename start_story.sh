@@ -1,4 +1,4 @@
-#! /bin/bash
+#!/bin/bash
 
 fmt=`tput setaf 45`
 end="\e[0m\n"
@@ -20,7 +20,7 @@ wget https://story-geth-binaries.s3.us-west-1.amazonaws.com/story-public/story-l
 
 # extract bins
 echo -e "${fmt}\nExtracting binaries${end}" && sleep 1
-tar zxvf story-linux-amd64-0.9.11-2a25df1.tar.gz --strip-components=1 -C story_client
+tar zxvf story-linux-amd64-0.10.0-9603826.tar.gz --strip-components=1 -C story_client
 tar zxvf geth-linux-amd64-0.9.2-ea9f0d2.tar.gz --strip-components=1 -C geth_client
 
 
