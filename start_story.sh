@@ -60,7 +60,6 @@ if [ $? -eq 0 ]; then
 else
     echo -e "${err}\nStory client start error${end}" && return
 fi
-
 # start geth client
 sudo tee /etc/systemd/system/gethd.service > /dev/null <<EOF
 [Unit]
@@ -120,7 +119,6 @@ else
 fi
 
 mv $HOME/.story/story/data/priv_validator_state.json $HOME/.story/priv_validator_state.json.backup
-
 rm -rf ~/.story/story/data
 rm -rf ~/.story/geth/iliad/geth/chaindata
 
